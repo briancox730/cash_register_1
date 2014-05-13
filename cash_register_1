@@ -7,7 +7,7 @@ puts "What is the amount tendered?"
 tendered = gets.chomp.to_f
 
 if (due > tendered)
-  puts "WARNING: Customer still owes #{(due - tendered).round(2)} Exiting..."
+  puts "WARNING: Customer still owes $#{(due - tendered).round(2)}! Exiting..."
 else
   puts  "===Thank You!===\nThe total change due is $#{(tendered - due).round(2)}\n\n#{Time.now.strftime("%m/%d/%y %I:%M%p")}\n================"
 end
